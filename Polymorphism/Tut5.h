@@ -10,8 +10,8 @@ public:
 	~Shape();
 
 	virtual void name() = 0;
-	virtual void perimeter() = 0;
-	virtual void area() = 0;
+	virtual double perimeter() = 0;
+	virtual double area() = 0;
 	virtual void draw() = 0;
 };
 
@@ -22,12 +22,12 @@ private:
 	int radius;
 
 public:
-	Circle();
+	Circle(int);
 	~Circle();
 
 	void name();
-	void perimeter();
-	void area();
+	double perimeter();
+	double area();
 	void draw();
 };
 
@@ -38,12 +38,12 @@ private:
 	int side;
 
 public:
-	Triangle();
+	Triangle(int);
 	~Triangle();
 
 	void name();
-	void area();
-	void perimeter();
+	double area();
+	double perimeter();
 	void draw();
 };
 
@@ -55,9 +55,12 @@ private:
 	int breadth;
 
 public:
+	Rectangle(int, int);
+	~Rectangle();
+
 	void name();
-	void area();
-	void perimeter();
+	double area();
+	double perimeter();
 	void draw();
 };
 #endif
