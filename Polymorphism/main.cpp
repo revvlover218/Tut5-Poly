@@ -5,13 +5,24 @@ int main()
 {
 	Shape *ptrShape[10];
 
-	ptrShape[0] = new Rectangle(10, 5);
-	ptrShape[1] = new Triangle(10);
-	ptrShape[2] = new Circle(9);
-	ptrShape[3] = new Rectangle(10, 5); 
-	ptrShape[4] = new Triangle(10);
-	ptrShape[5] = new Circle(15);
-	ptrShape[6] = new Rectangle(20, 25);
+	Rectangle R1(10, 15);
+	Rectangle R2(20, 25); 
+	Rectangle R3(30, 35);
+
+	Triangle T1(40);
+	Triangle T2(45);
+	
+	Circle C1(50);
+	Circle C2(55);
+
+	ptrShape[0] = &R1;
+	ptrShape[1] = &T1;
+	ptrShape[2] = &C1;
+	ptrShape[3] = &R2;
+	ptrShape[4] = &T2;
+	ptrShape[5] = &C2;
+	ptrShape[6] = &R3;
+	
 	ptrShape[7] = new Triangle(30);
 	ptrShape[8] = new Circle(35);
 	ptrShape[9] = new Rectangle(40, 45);
